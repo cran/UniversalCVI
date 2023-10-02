@@ -1,0 +1,9 @@
+bibentry(
+  bibtype  = "Article",
+  title    = "Hard and Soft Cluster Validity Indices",
+  author   = c(person("Nathakhun Wiroonsri"),
+                    person("Onthada Preedasawakul")),
+  journal  = "arXiv:2308.14785",
+  year     = "2023",
+  doi      = "10.48550/arXiv.2308.14785"
+)
