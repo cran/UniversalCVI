@@ -27,7 +27,7 @@ TANG.IDX(x, cmax, cmin = 2, method = "FCM", fzm = 2, nstart = 20, iter = 100)
 }
 \details{
 The Tang index  is defined as \cr
-\deqn{TANG(c) = \dfrac{\sum_{j=1}^c \sum_{i=1}^n\mu_{ij}^2\| {x}_i-{v}_j\|^2 + \frac{1}{c(c-1)}\sum_{j\neq k}\| {v}_j-{v}_k\|^2}{\min_{j\neq k} \{ \| {v}_j-{v}_k\|^2 \}+\frac{1}{c}}.}
+\deqn{TANG(c) = \frac{\sum_{j=1}^c \sum_{i=1}^n\mu_{ij}^2\| {x}_i-{v}_j\|^2 + \frac{1}{c(c-1)}\sum_{j\neq k}\| {v}_j-{v}_k\|^2}{\min_{j\neq k} \{ \| {v}_j-{v}_k\|^2 \}+\frac{1}{c}}.}
 The smallest value of \eqn{TANG(c)} indicates a valid optimal partition.\cr
 }
 \value{

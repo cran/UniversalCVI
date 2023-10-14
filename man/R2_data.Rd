@@ -9,7 +9,7 @@ A data frame with 1750 data points and 3 variables
 \describe{
   \item{\code{x}}{Numeric values generated from Gaussian distributions}
   \item{\code{y}}{Numeric values generated from Gaussian distributions}
-  \item{\code{label}}{Categorical labels {1,2,3,4,5,6,7}}
+  \item{\code{label}}{Categorical labels 1,2,3,4,5,6,7}
 }
 }
 \usage{

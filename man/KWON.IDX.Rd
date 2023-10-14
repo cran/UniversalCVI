@@ -27,7 +27,7 @@ KWON.IDX(x, cmax, cmin = 2, method = "FCM", fzm = 2, nstart = 20, iter = 100)
 }
 \details{
 The KWON index is defined as \cr
-\deqn{KWON(c) = \dfrac{\sum_{j=1}^c\sum_{i=1}^n \mu_{ij}^2  \|{x}_i-{v}_j\|^2 +\frac{1}{c}\sum_{j=1}^c\| {v}_j-{v}_0\|^2}{\min_{i \neq j} \| {v}_i-{v}_j\|^2}.
+\deqn{KWON(c) = \frac{\sum_{j=1}^c\sum_{i=1}^n \mu_{ij}^2  \|{x}_i-{v}_j\|^2 +\frac{1}{c}\sum_{j=1}^c\| {v}_j-{v}_0\|^2}{\min_{i \neq j} \| {v}_i-{v}_j\|^2}.
 }
 The smallest value of \eqn{KWON(c)} indicates a valid optimal partition.\cr
 

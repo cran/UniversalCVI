@@ -9,7 +9,7 @@ A data frame with 1000 data points and 3 variables
 \describe{
   \item{\code{x}}{Numeric values generated from Uniform distributions}
   \item{\code{y}}{Numeric values generated from Uniform distributions}
-  \item{\code{label}}{Categorical labels {1,2,3}}
+  \item{\code{label}}{Categorical labels 1,2,3}
 }
 }
 \usage{

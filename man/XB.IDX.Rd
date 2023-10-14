@@ -28,7 +28,7 @@ XB.IDX(x, cmax, cmin = 2, method = "FCM", fzm = 2, nstart = 20, iter = 100)
 \details{
 
 The XB index is defined as \cr
-\deqn{ XB(c) = \dfrac{\sum_{j=1}^c\sum_{i=1}^n\mu_{ij}^2\| {x}_i-{v}_j\|^2}
+\deqn{ XB(c) = \frac{\sum_{j=1}^c\sum_{i=1}^n\mu_{ij}^2\| {x}_i-{v}_j\|^2}
              {n \cdot \min_{j\neq k} \{ \| {v}_j-{v}_k\|^2 \}}.}
 The lowest value of \eqn{XB(c)} indicates a valid optimal partition.\cr
 }

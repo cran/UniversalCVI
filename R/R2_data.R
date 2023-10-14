@@ -4,7 +4,7 @@
 #' \describe{
 #'   \item{\code{x}}{Numeric values generated from Gaussian distributions}
 #'   \item{\code{y}}{Numeric values generated from Gaussian distributions}
-#'   \item{\code{label}}{Categorical labels {1,2,3,4,5,6,7}}
+#'   \item{\code{label}}{Categorical labels 1,2,3,4,5,6,7}
 #'}
 #' @references  {N. Wiroonsri, O. Preedasawakul, A correlation-based fuzzy cluster validity index with secondary options detector, arXiv:2308.14785, 2023}
 #' @author {Nathakhun Wiroonsri and Onthada Preedasawakul}

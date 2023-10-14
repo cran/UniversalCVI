@@ -27,7 +27,7 @@ HF.IDX(x, cmax, cmin = 2, method = "FCM", fzm = 2, nstart = 20, iter = 100)
 }
 \details{
 The HF index is defined as \cr
-\deqn{HF(c) = \dfrac{\sum_{j=1}^c \sum_{i=1}^n\mu_{ij}^m\| {x}_i-{v}_j\|^2 + \frac{1}{c(c-1)}\sum_{j\neq k}\| {v}_j-{v}_k\|^2}{\frac{n}{2c}\left(\min_{j \neq k}\{\| {v}_j-{v}_k\|^2\} +\text{median}_{j \neq k }\{\| {v}_j-{v}_k\|^2\}\right)}.}
+\deqn{HF(c) = \frac{\sum_{j=1}^c \sum_{i=1}^n\mu_{ij}^m\| {x}_i-{v}_j\|^2 + \frac{1}{c(c-1)}\sum_{j\neq k}\| {v}_j-{v}_k\|^2}{\frac{n}{2c}\left(\min_{j \neq k}\{\| {v}_j-{v}_k\|^2\} +\text{median}_{j \neq k }\{\| {v}_j-{v}_k\|^2\}\right)}.}
 The smallest value of \eqn{HF(c)} indicates a valid optimal partition.\cr
 }
 \value{

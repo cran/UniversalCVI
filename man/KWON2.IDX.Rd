@@ -28,7 +28,7 @@ KWON2.IDX(x, cmax, cmin = 2, method = "FCM", fzm = 2, nstart = 20, iter = 100)
 }
 \details{
   KWON2 is defined as \cr
-\deqn{KWON2(c) = \dfrac{w_1\left[w_2\sum_{j=1}^c\sum_{i=1}^n \mu_{ij}^{2^{\sqrt{\frac{m}{2}}}}  \|{x}_i-{v}_j\|^2  + \dfrac{\sum_{j=1}^c\| {v}_j-{v}_0\|^2}{\max_j \|{v}_j-{v}_0\|^2 } + w_3 \right]}{\min_{i \neq j} \| {v}_i-{v}_j\|^2 + \frac{1}{c}+\frac{1}{c^m-1}}.
+\deqn{KWON2(c) = \frac{w_1\left[w_2\sum_{j=1}^c\sum_{i=1}^n \mu_{ij}^{2^{\sqrt{\frac{m}{2}}}}  \|{x}_i-{v}_j\|^2  + \frac{\sum_{j=1}^c\| {v}_j-{v}_0\|^2}{\max_j \|{v}_j-{v}_0\|^2 } + w_3 \right]}{\min_{i \neq j} \| {v}_i-{v}_j\|^2 + \frac{1}{c}+\frac{1}{c^m-1}}.
 }
 where \eqn{w_1 = \frac{n-c+1}{n}}, \eqn{w_2 = \left(\frac{c}{c-1}\right)^{\sqrt{2}}} and \eqn{w_3=\frac{nc}{(n-c+1)^2}}.\cr\cr
 The smallest value of  \eqn{KWON2(c)} indicates a valid optimal partition.\cr
