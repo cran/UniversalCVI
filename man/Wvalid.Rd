@@ -9,7 +9,7 @@ Computes the NC correlation, NCI, NCI1 and NCI2 cluster validity indices for the
 }
 \usage{
 Wvalid(x, kmax, kmin = 2, method = "kmeans",
-  corr = "pearson", nstart = 100, NCstart = TRUE)
+  corr = "pearson", nstart = 100, sampling = 1, NCstart = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -25,6 +25,7 @@ Wvalid(x, kmax, kmin = 2, method = "kmeans",
 }
   \item{nstart}{a maximum number of initial random sets for kmeans for \code{method = "kmeans"}. The default is \code{100}.
 }
+  \item{sampling}{a number greater than 0 and less than or equal to 1 indicating the undersampling proportion of data to be used. This argument is intended for handling a large dataset. The default is \code{1}.}
   \item{NCstart}{logical for \code{indexlist} includes the \code{"NC"}, \code{"NCI"}, \code{"NCI1"}, and \code{"NCI2"}), if \code{TRUE}, the NC correlation at \code{k=1} is defined as the ratio introduced in the reference. Otherwise, it is assigned as \code{0}.
 }
 }

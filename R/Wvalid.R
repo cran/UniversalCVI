@@ -1,5 +1,5 @@
 Wvalid <- function(x, kmax, kmin=2, method='kmeans',
-                    corr='pearson', nstart=100, NCstart = TRUE) {
+                    corr='pearson', nstart=100, sampling = 1, NCstart = TRUE) {
   if(missing(x))
     stop("Missing input argument. A numeric data frame or matrix is required")
   if(missing(kmax))
@@ -15,6 +15,16 @@ Wvalid <- function(x, kmax, kmin=2, method='kmeans',
   if(method == "kmeans"){
     if(!is.numeric(nstart))
       stop("Argument 'nstart' must be numeric")
+  }
+  if(!is.numeric(sampling))
+    stop("Argument 'sampling' must be numeric")
+  if(!(sampling > 0 & sampling <= 1))
+    stop("'sampling' must be greater than 0 and less than or equal to 1")
+  if(sampling == 1){
+    x = x
+  }else {
+    sample = sample(1:(nrow(x)),ceiling(nrow(x)*sampling),replace = FALSE)
+    x = x[sample,]
   }
   if(!is.logical(NCstart))
     stop("Argument 'NCstart' must be logical")

@@ -10,7 +10,7 @@ Computes the WPC (WP correlation), WP, WPCI1 and WPCI2 (N. Wiroonsri and O. Pree
 
 \usage{
 WP.IDX(x, cmax, cmin = 2, corr = 'pearson', method = 'FCM', fzm = 2,
-  gamma = (fzm^2*7)/4, iter = 100, nstart = 20, NCstart = TRUE)
+  gamma = (fzm^2*7)/4, sampling = 1, iter = 100, nstart = 20, NCstart = TRUE)
 }
 \arguments{
   \item{x}{a numeric data frame or matrix where each column is a variable to be used for cluster analysis and each row is a data point.
@@ -27,6 +27,7 @@ WP.IDX(x, cmax, cmin = 2, corr = 'pearson', method = 'FCM', fzm = 2,
 }
   \item{gamma}{adjusted fuzziness parameter for \code{indexlist} = (\code{"WP"}, \code{"WPC"}, \code{"WPCI1"}, \code{"WPCI2"}). The default is computed from \eqn{7fzm^2/4}.
 }
+  \item{sampling}{a number greater than 0 and less than or equal to 1 indicating the undersampling proportion of data to be used. This argument is intended for handling a large dataset. The default is \code{1}.}
   \item{iter}{a maximum number of iterations for \code{method = "FCM"}. The default is \code{100}.
 }
   \item{nstart}{a maximum number of initial random sets for FCM for \code{method = "FCM"}. The default is \code{20}.

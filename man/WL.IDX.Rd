@@ -29,7 +29,7 @@ WL.IDX(x, cmax, cmin = 2, method = "FCM", fzm = 2, nstart = 20, iter = 100)
 }
 \details{
 The WL index is defined as \cr
-\deqn{WL(c) = \frac{\sum_{j=1}^c\left(\frac{\sum_{i=1}^n\mu_{ij}^2\| {x}_i-{v}_j\|^2}{\sum_{i=1}^n\mu_{ij}}\right)}{\min_{j \neq k}\{\| {v}_j-{v}_k\|^2\} +\text{median}_{j \neq k }\{\| {v}_j-{v}_k\|^2\}}.}
+\deqn{WL(c) = \frac{\sum_{j=1}^c\left(\frac{\sum_{i=1}^n\mu_{ij}^2\| {x}_i-{v}_j\|^2}{\sum_{i=1}^n\mu_{ij}}\right)}{min_{j \neq k}\{\| {v}_j-{v}_k\|^2\} +median_{j \neq k }\{\| {v}_j-{v}_k\|^2\}}.}
 The smallest value of \eqn{WL(c)} indicates a valid optimal partition.\cr
 }
 \value{

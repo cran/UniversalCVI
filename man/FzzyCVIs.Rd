@@ -7,7 +7,7 @@ Fuzzy cluster validity indexes used in Wiroonsri and Preedasawakul (2023)
 }
 \usage{
 FzzyCVIs(x, cmax, cmin = 2, indexlist = 'all', corr = 'pearson',
-  method = 'FCM', fzm = 2, gamma = (fzm^2*7)/4,
+  method = 'FCM', fzm = 2, gamma = (fzm^2*7)/4, sampling = 1,
   iter = 100, nstart = 20, NCstart = TRUE)
 }
 \arguments{
@@ -27,6 +27,7 @@ FzzyCVIs(x, cmax, cmin = 2, indexlist = 'all', corr = 'pearson',
 }
   \item{gamma}{adjusted fuzziness parameter for \code{indexlist} = (\code{"WP"}, \code{"WPC"}, \code{"WPCI1"}, \code{"WPCI2"}). The default is \eqn{7fzm^2/4}.
 }
+  \item{sampling}{a number greater than 0 and less than or equal to 1 indicating the undersampling proportion of data to be used. This argument is intended for handling a large dataset. The default is \code{1}.}
   \item{iter}{a maximum number of iterations for \code{method = "FCM"}. The default is \code{100}.
 }
   \item{nstart}{a maximum number of initial random sets for FCM for \code{method = "FCM"}. The default is \code{20}.

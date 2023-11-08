@@ -1,6 +1,7 @@
 FzzyCVIs <- function(x, cmax, cmin = 2, indexlist = 'all', corr = 'pearson',
                      method = 'FCM', fzm = 2,
                      gamma = (fzm^2*7)/4,
+                     sampling = 1,
                      iter = 100,
                      nstart = 20,
                      NCstart = TRUE){
@@ -35,6 +36,16 @@ FzzyCVIs <- function(x, cmax, cmin = 2, indexlist = 'all', corr = 'pearson',
       stop("Argument 'NCstart' must be logical")
     if(!is.numeric(gamma))
       stop("Argument 'gamma' must be numeric or leave blank for default value")
+  }
+  if(!is.numeric(sampling))
+    stop("Argument 'sampling' must be numeric")
+  if(!(sampling > 0 & sampling <= 1))
+    stop("'sampling' must be greater than 0 and less than or equal to 1")
+  if(sampling == 1){
+    x = x
+  }else {
+    sample = sample(1:(nrow(x)),ceiling(nrow(x)*sampling),replace = FALSE)
+    x = x[sample,]
   }
   # Defined vector
   xb = vector()

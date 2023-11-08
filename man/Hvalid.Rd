@@ -8,7 +8,7 @@ Computes the cluster validity indexes for a result of either kmeans or hierarchi
 }
 \usage{
 Hvalid(x, kmax, kmin = 2, indexlist = "all", method = "kmeans",
-  p = 2, q = 2, corr = "pearson", nstart = 100, NCstart = TRUE)
+  p = 2, q = 2, corr = "pearson", nstart = 100, sampling = 1, NCstart = TRUE)
 }
 \arguments{
   \item{x}{a numeric data frame or matrix where each column is a variable to be used for cluster analysis and each row is a data point.
@@ -29,6 +29,7 @@ Hvalid(x, kmax, kmin = 2, indexlist = "all", method = "kmeans",
 }
   \item{nstart}{a maximum number of initial random sets for kmeans for \code{method = "kmeans"}. The default is \code{100}.
 }
+  \item{sampling}{a number greater than 0 and less than or equal to 1 indicating the undersampling proportion of data to be used. This argument is intended for handling a large dataset. The default is \code{1}.}
   \item{NCstart}{logical for \code{indexlist} includes the \code{"NC"}, \code{"NCI"}, \code{"NCI1"}, and \code{"NCI2"}), if \code{TRUE}, the NC correlation at \code{k=1} is defined as the ratio introduced in the reference. Otherwise, it is assigned as \code{0}.
 }
 }

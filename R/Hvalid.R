@@ -3,7 +3,9 @@ Hvalid <-function(x, kmax, kmin=2,
                   method = 'kmeans',
                   p = 2, q = 2, # For DB ans DBs index
                   corr = 'pearson',
-                  nstart = 100, NCstart = TRUE){
+                  nstart = 100,
+                  sampling = 1,
+                  NCstart = TRUE){
   if(missing(x))
     stop("Missing input argument. A numeric data frame or matrix is required")
   if(missing(kmax))
@@ -35,10 +37,30 @@ Hvalid <-function(x, kmax, kmin=2,
       stop("Argument 'corr' should be one of 'pearson', 'kendall', 'spearman'")
     if(!is.logical(NCstart))
       stop("Argument 'NCstart' must be logical")
+    if(!is.numeric(sampling))
+      stop("Argument 'sampling' must be numeric")
+    if(!(sampling > 0 & sampling <= 1))
+      stop("'sampling' must be greater than 0 and less than or equal to 1")
+    if(sampling == 1){
+      x = x
+    }else {
+      sample = sample(1:(nrow(x)),ceiling(nrow(x)*sampling),replace = FALSE)
+      x = x[sample,]
+    }
     dis = dist(x) #Distance of data
     d = as.vector(dis)
     dtom = sqrt(rowSums((x-colMeans(x))^2))
     E0 = sum(dtom)
+  }
+  if(!is.numeric(sampling))
+    stop("Argument 'sampling' must be numeric")
+  if(!(sampling > 0 & sampling <= 1))
+    stop("'sampling' must be greater than 0 and less than or equal to 1")
+  if(sampling == 1){
+    x = x
+  }else {
+    sample = sample(1:(nrow(x)),ceiling(nrow(x)*sampling),replace = FALSE)
+    x = x[sample,]
   }
   dm=dim(x) # Dimension of data
   # Defined vector
