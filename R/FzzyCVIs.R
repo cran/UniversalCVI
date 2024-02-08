@@ -190,7 +190,7 @@ FzzyCVIs <- function(x, cmax, cmin = 2, indexlist = 'all', corr = 'pearson',
 
       adp = (1/(k*(k-1)))*sum(d3)
       kwon[k-cmin+1] = (sum(d1)+ mean(d2))/min(d3) #NW
-      kwon2[k-cmin+1] = w1*((w2*sum(d4)) + (sum(d2)/max(d2)) + w3) / (min(d3) + 1/k + 1/(k^fzm - 1))
+      kwon2[k-cmin+1] = w1*((w2*sum(d4)) + (sum(d2)/max(d2)) + w3) / (min(d3) + 1/k + 1/(k^(fzm - 1)))
       tang[k-cmin+1] = (sum(d1) + 2*adp)/ (min(d3) + 1/k) #NW
       hf[k-cmin+1] =  (sum(d5) + 2*adp)/ ((n/2*k)* (min(d3) + median(d3))) #NW
       xb[k-cmin+1] = (sum(d1))/(n*min(d3))

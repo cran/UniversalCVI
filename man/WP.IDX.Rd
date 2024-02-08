@@ -68,7 +68,7 @@ x = R1_data[,1:2]
 # ---- FCM algorithm ----
 
 # Compute all the indices by WP.IDX using default gamma
-FCM.WP = WP.IDX(scale(x), cmax = 15, cmin = 2, corr = 'pearson', method = 'FCM', fzm = 2,
+FCM.WP = WP.IDX(scale(x), cmax = 10, cmin = 2, corr = 'pearson', method = 'FCM', fzm = 2,
   iter = 100, nstart = 20, NCstart = TRUE)
 print(FCM.WP$WP)
 
@@ -79,7 +79,7 @@ FCM.WP$WP[which.max(FCM.WP$WP$WPI),]
 # ---- EM algorithm ----
 
 # Compute all the indices by WP.IDX using default gamma
-EM.WP = WP.IDX(scale(x), cmax = 15, cmin = 2, corr = 'pearson', method = 'EM',
+EM.WP = WP.IDX(scale(x), cmax = 10, cmin = 2, corr = 'pearson', method = 'EM',
   iter = 100, nstart = 20, NCstart = TRUE)
 print(EM.WP$WP)
 

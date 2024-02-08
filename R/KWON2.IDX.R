@@ -63,7 +63,7 @@ KWON2.IDX <- function(x, cmax, cmin = 2, method = "FCM",
         s=s+1
       }
     }
-    kwon2[k-cmin+1] = w1*((w2*sum(d4)) + (sum(d2)/max(d2)) + w3 ) / (min(d3) + 1/k + 1/(k^fzm - 1))
+    kwon2[k-cmin+1] = w1*((w2*sum(d4)) + (sum(d2)/max(d2)) + w3 ) / (min(d3) + 1/k + 1/(k^(fzm - 1)))
   }
   KWON2.data = data.frame(cbind("c"=cmin:cmax,"KWON2"=kwon2))
   return(KWON2.data)
