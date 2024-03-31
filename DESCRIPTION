@@ -1,7 +1,7 @@
 Package: UniversalCVI
 Type: Package
 Title: Hard and Soft Cluster Validity Indices
-Version: 1.1.1
+Version: 1.1.2
 Imports: e1071, mclust
 Authors@R: 
     c(person(given = "Nathakhun",
@@ -43,10 +43,10 @@ LazyData: true
 RoxygenNote: 7.2.3
 Depends: R (>= 2.10)
 NeedsCompilation: no
-Packaged: 2024-02-08 13:29:22 UTC; lenovo
+Packaged: 2024-03-30 15:20:34 UTC; lenovo
 Author: Nathakhun Wiroonsri [cre, aut]
     (<https://orcid.org/0000-0003-2167-9641>),
   Onthada Preedasawakul [aut] (<https://orcid.org/0000-0002-4186-3158>)
 Maintainer: Nathakhun Wiroonsri <nathakhun.wir@kmutt.ac.th>
 Repository: CRAN
-Date/Publication: 2024-02-08 13:50:03 UTC
+Date/Publication: 2024-03-31 05:30:11 UTC

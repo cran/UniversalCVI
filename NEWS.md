@@ -1,3 +1,6 @@
+# UniversalCVI 1.1.2
+* Edit the function AccClust.
+
 # UniversalCVI 1.1.1
 * Edit the formula of KWON2 index in both KWON2 and FzzyCVIs. 
 * Edit the function AccClust. 

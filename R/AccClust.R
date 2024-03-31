@@ -20,14 +20,7 @@ AccClust <- function(x, label.names = "label",algorithm = "FCM", fzm = 2, scale 
   }
   wd = 100000
   x = data.frame(x)
-  # order label
-  if (!all(unique(x[,label.names]) %in% seq(length(unique(x[,label.names]))))){
-    s = 1
-    for (i in unique(x[,label.names])) {
-      x[,label.names][x[label.names]==i] = s
-      s = s+1
-    }
-  }
+  x[,label.names] = as.numeric(as.factor(x[,label.names])) #new order label
   k = length(unique(x[,label.names])) # True number of cluster
   tot.alg = length(algorithm) # Number of algorithms
   u = order(table(x[,label.names]),decreasing = T) # Order labels
