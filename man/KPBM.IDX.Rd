@@ -34,7 +34,7 @@ The largest value of \eqn{KPBM(c)} indicates a valid optimal partition.\cr
   \item{KPBM}{the KPBM index for \code{c} from \code{cmin} to \code{cmax} shown in a data frame where the first and the second columns are \code{c} and the KPBM index, respectively.}
 }
 \references{
-C. Alok. (2010). "An investigation of clustering algorithms and soft computing approaches for pattern recognition," Department of Computer Science, Assam University. \url{http://hdl.handle.net/10603/93443}
+C. Alok. (2010). "An investigation of clustering algorithms and soft computing approaches for pattern recognition",  Department of Computer Science, Assam University.
 }
 \author{
 Nathakhun Wiroonsri and Onthada Preedasawakul}

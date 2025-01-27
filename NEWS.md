@@ -1,3 +1,6 @@
+# UniversalCVI 1.2.0
+* Add Silhouette index
+
 # UniversalCVI 1.1.2
 * Edit the function AccClust.
 

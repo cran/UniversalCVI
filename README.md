@@ -9,7 +9,7 @@ The cluster validity indices available in this package are listed as follows:
 
 **Hard clustering:**
 
-Dunn's index, Calinski–Harabasz index, Davies–Bouldin’s index, Point biserial correlation index, Chou-Su-Lai measure, Davies–Bouldin*’s index, Score function, Starczewski index, Pakhira–Bandyopadhyay–Maulik (for crisp clustering) index, and Wiroonsri index.
+Dunn's index, Calinski–Harabasz index, Davies–Bouldin’s index, Point biserial correlation index, Chou-Su-Lai measure, Davies–Bouldin*’s index, Score function, Starczewski index, Pakhira–Bandyopadhyay–Maulik (for crisp clustering) index, Silhouette index, and Wiroonsri index.
 
 **Fuzzy clustering:**
 
