@@ -8,8 +8,9 @@ Wvalid <- function(x, kmax, kmin=2, method='kmeans',
     stop("Argument 'kmax' must be numeric")
   if(kmax > nrow(x))
     stop("The maximum number of clusters for consideration should be less than or equal to the number of data points in dataset.")
-  if(!any(method  == c("kmeans", "hclust_complete", "hclust_average", "hclust_single")))
-    stop("Argument 'method' should be one of 'kmeans', 'hclust_complete', 'hclust_average' or 'hclust_single'")
+  if (!any(method == c("kmeans", "hclust_ward.D", "hclust_ward.D2", "hclust_complete", "hclust_average", 
+                       "hclust_single"))) 
+    stop("Argument 'method' should be one of 'kmeans', 'hclust_ward.D', 'hclust_ward.D2', 'hclust_complete', 'hclust_average', 'hclust_single'")
   if(!any(corr == c("pearson","kendall","spearman")))
     stop("Argument 'corr' should be one of 'pearson', 'kendall', 'spearman'")
   if(method == "kmeans"){

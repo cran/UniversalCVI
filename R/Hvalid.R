@@ -20,8 +20,9 @@ Hvalid <-function(x, kmax, kmin=2,
     warning("The minimum number of clusters for consideration should be more than 1",immediate. = TRUE)
   if(!any(indexlist %in% c("all", "PB","CH","CSL","DB","DBs","SF","DI","NC","NCI","NCI1","NCI2","NCI3","STR","PBM")))
     stop("Argument 'indexlist' is not in the possible value")
-  if(!any(method  == c("kmeans","hclust_complete","hclust_average","hclust_single")))
-    stop("Argument 'method' should be one of 'kmeans', 'hclust_complete', 'hclust_average', 'hclust_single'")
+  if (!any(method == c("kmeans", "hclust_ward.D", "hclust_ward.D2", "hclust_complete", "hclust_average", 
+                       "hclust_single"))) 
+    stop("Argument 'method' should be one of 'kmeans', 'hclust_ward.D', 'hclust_ward.D2', 'hclust_complete', 'hclust_average', 'hclust_single'")
   if(method == "kmeans"){
     if(!is.numeric(nstart))
       stop("Argument 'nstart' must be numeric")

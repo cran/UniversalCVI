@@ -13,8 +13,9 @@ SF.IDX <- function(x, kmax, kmin=2,
     stop("Argument 'kmin' must be numeric")
   if(kmin <=1)
     warning("The minimum number of clusters for consideration should be more than 1",immediate. = TRUE)
-  if(!any(method  == c("kmeans","hclust_complete","hclust_average","hclust_single")))
-    stop("Argument 'method' should be one of 'kmeans', 'hclust_complete', 'hclust_average', 'hclust_single'")
+  if (!any(method == c("kmeans", "hclust_ward.D", "hclust_ward.D2", "hclust_complete", "hclust_average", 
+                       "hclust_single"))) 
+    stop("Argument 'method' should be one of 'kmeans', 'hclust_ward.D', 'hclust_ward.D2', 'hclust_complete', 'hclust_average', 'hclust_single'")
   if(method == "kmeans"){
     if(!is.numeric(nstart))
       stop("Argument 'nstart' must be numeric")

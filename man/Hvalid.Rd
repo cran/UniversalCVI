@@ -19,7 +19,7 @@ Hvalid(x, kmax, kmin = 2, indexlist = "all", method = "kmeans",
 }
   \item{indexlist}{a character string indicating which cluster validity indexes to be computed (\code{"all"}, \code{"NC"}, \code{"NCI"}, \code{"NCI1"}, \code{"NCI2"}, \code{"PB"}, \code{"CSL"}, \code{"CH"}, \code{"DB"}, \code{"DBs"}, \code{"SF"}, \code{"DI"}, \code{"STR"}, \code{"PBM"}). More than one indexes can be selected.
 }
-  \item{method}{a character string indicating which clustering method to be used (\code{"kmeans"}, \code{"hclust_complete"}, \code{"hclust_average"}, \code{"hclust_single"}). The default is \code{"kmeans"}.
+  \item{method}{a character string indicating which clustering method to be used (\code{"kmeans"}, \code{"hclust_complete"}, \code{"hclust_ward.D"}, \code{"hclust_ward.D2"}, \code{"hclust_average"}, \code{"hclust_single"}). The default is \code{"kmeans"}.
 }
   \item{p}{the power of the Minkowski distance between centroids of clusters for \code{indexlist = c("DB","DBs")}. The default is \code{2}.
 }

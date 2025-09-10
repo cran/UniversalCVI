@@ -1,3 +1,6 @@
+# UniversalCVI 1.3.0
+* Add methods hclust_ward.D and hclust_war.D2 to all hard CVIs 
+
 # UniversalCVI 1.2.0
 * Add Silhouette index
 

@@ -18,7 +18,7 @@ DB.IDX(x, kmax, kmin = 2, method = "kmeans",
 }
   \item{kmin}{a minimum number of clusters to be considered. The default is \code{2}.
 }
-  \item{method}{a character string indicating which clustering method to be used (\code{"kmeans"}, \code{"hclust_complete"}, \code{"hclust_average"}, \code{"hclust_single"}). The default is \code{"kmeans"}.
+  \item{method}{a character string indicating which clustering method to be used (\code{"kmeans"}, \code{"hclust_ward.D"}, \code{"hclust_ward.D2"}, \code{"hclust_complete"}, \code{"hclust_average"}, \code{"hclust_single"}). The default is \code{"kmeans"}.
 }
   \item{indexlist}{a character string indicating which cluster validity indexes to be computed (\code{"all"}, \code{"DB"}, \code{"DBs"}). More than one indexes can be selected.
 }
