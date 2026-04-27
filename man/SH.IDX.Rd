@@ -51,8 +51,7 @@ The largest value of \eqn{SH(k)} indicates a valid optimal partition.
 \references{
 Rousseeuw, P.J., 1987. Silhouettes: a graphical aid to the interpretation and validation of cluster analysis. J. Comput. Appl. Math. 20, 53–65.
 
-Kaufman, L. and Rousseeuw, P.J., 2009. Finding groups in data: an introduction to cluster analysis. John Wiley & Sons.
-
+P.J. Rousseeuw, "Silhouettes: a graphical aid to the interpretation and validation of cluster analysis"." \emph{J. Comput. Appl. Math} 20, 53–65 (1987).
 }
 
 \author{

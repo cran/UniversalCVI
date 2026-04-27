@@ -18,7 +18,7 @@ Hvalid <-function(x, kmax, kmin=2,
     stop("Argument 'kmin' must be numeric")
   if(kmin <=1)
     warning("The minimum number of clusters for consideration should be more than 1",immediate. = TRUE)
-  if(!any(indexlist %in% c("all", "PB","CH","CSL","DB","DBs","SF","DI","NC","NCI","NCI1","NCI2","NCI3","STR","PBM")))
+  if(!any(indexlist %in% c("all", "PB","CH","CSL","DB","DBs","SH","SF","DI","NC","NCI","NCI1","NCI2","NCI3","STR","PBM")))
     stop("Argument 'indexlist' is not in the possible value")
   if (!any(method == c("kmeans", "hclust_ward.D", "hclust_ward.D2", "hclust_complete", "hclust_average", 
                        "hclust_single"))) 
@@ -71,6 +71,7 @@ Hvalid <-function(x, kmax, kmin=2,
   dbs = vector()
   sf = vector()
   di = vector()
+  sc = vector()
   crr= vector()
   str = rep(0,kmax-kmin+1)
   pbm = rep(0,kmax-kmin+1)
@@ -204,6 +205,30 @@ Hvalid <-function(x, kmax, kmin=2,
       dem = sapply(1:k, function(i) sum(d.cen[cluss == i]))
       ch[k-kmin+1] = ((nrow(x) - k) / (k-1)) * (sum(num) / sum(dem))
     }
+    if(any(indexlist %in% c("all", "SH"))){
+      size = table(cluss)
+      sss = 1:nrow(x)
+      s=1
+      for (i in 1:k) {
+        mm = as.matrix(dist(x[cluss == i,]))
+        ll = as.numeric(size[i])
+        if (ll > 1){
+          for (u in 1:ll){
+            b = Inf
+            a = mean(mm[u,-u])
+            for (ii in setdiff(1:k,i)){
+              b = min(b,mean(as.matrix(dist(rbind(x[cluss == i,][u,], x[cluss == ii,])))[1,-1]))
+            }
+            sss[s] = (b-a)/max(a,b)
+            s= s+1
+          }
+        }else{
+          sss[s] = 0
+          s=s+1
+        }
+      }
+      sc[k - kmin + 1] = mean(sss)
+    }
     if(any(indexlist %in% c("all","DB","DBs","SF"))){
       # Si,q
       S = vector()
@@ -281,6 +306,7 @@ Hvalid <-function(x, kmax, kmin=2,
   DI = data.frame(cbind("k"=kmin:kmax,"DI"=di))
   STR = data.frame(cbind("k"= kmin:kmax, "STR" = str))
   PBM = data.frame(cbind("k"= kmin:kmax, "PBM" = pbm))
+  SH = data.frame(cbind("k"=kmin:kmax,"SH"=sc))
   # End defined data frame
   if(any(indexlist %in% c("all","NC", "NCI", "NCI1", "NCI2"))){
     K = length(crr)
@@ -309,7 +335,7 @@ Hvalid <-function(x, kmax, kmin=2,
     NWI2 = 0
     NWI3 = 0
   }
-  my_list <- list("NC"=crr, "NCI" = NWI3, "NCI1" = NWI, "NCI2" = NWI2, "CSL"=CSL, "STR"= STR, "CH"=CH,"DB"=DB, "DBs"=DBs, "PBM" = PBM, "DI"=DI, "PB"=PB, "SF"=SF)
+  my_list <- list("NC"=crr, "NCI" = NWI3, "NCI1" = NWI, "NCI2" = NWI2, "CSL"=CSL, "STR"= STR, "CH"=CH, "SH"=SH,"DB"=DB, "DBs"=DBs, "PBM" = PBM, "DI"=DI, "PB"=PB, "SF"=SF)
   if (sum(indexlist == "all")==1){
     return(my_list)
   } else {

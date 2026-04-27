@@ -10,13 +10,13 @@ Plot and compare upto 8 indices computed by the algorithms in this package.
 plot_idx(idxresult,selected.idx = NULL)
 }
 \arguments{
-  \item{idxresult}{a result from one of the algorithms \code{FzzyCVIs, WP.IDX, GC.IDX, CCV.IDX, XB.IDX, WL.IDX, TANG.IDX, PBM.IDX, KWON.IDX, KWON2.IDX, KPBM.IDX, HF.IDX, Hvalid, Wvalid, SF.IDX, PB.IDX, DI.IDX, DB.IDX, CSL.IDX, CH.IDX or STRPBM.IDX}.
+  \item{idxresult}{a result from one of the algorithms \code{FzzyCVIs, WP.IDX, GC.IDX, CCV.IDX, XB.IDX, WL.IDX, TANG.IDX, PBM.IDX, KWON.IDX, KWON2.IDX, KPBM.IDX, HF.IDX, Hvalid, Wvalid, SF.IDX, SH.IDX, PB.IDX, DI.IDX, DB.IDX, CSL.IDX, CH.IDX or STRPBM.IDX}.
 }
   \item{selected.idx}{a numeric vector indicates a part of the indexes from the \code{idxresult} in respective order selected by a user. For instance, \code{selected.idx = 3} or \code{selected.idx = c(1,3,5)} may be selected. If not specified, the full idxresult will be considered.
   }
 }
 \value{
-Plots of upto 8 cluster validity indices computed from \code{FzzyCVIs, WP.IDX, GC.IDX, CCV.IDX, XB.IDX, WL.IDX, TANG.IDX, PBM.IDX, KWON.IDX, KWON2.IDX, KPBM.IDX, HF.IDX, Hvalid, Wvalid, SF.IDX, PB.IDX, DI.IDX, DB.IDX, CSL.IDX, CH.IDX or STRPBM.IDX}. When using the isolated index algorithm, all the plots computed by that algorithm will be shown. When using \code{FzzyCVIs or Hvalid} with more than 8 selected indices, the first 8 indices will be plotted.
+Plots of upto 8 cluster validity indices computed from \code{FzzyCVIs, WP.IDX, GC.IDX, CCV.IDX, XB.IDX, WL.IDX, TANG.IDX, PBM.IDX, KWON.IDX, KWON2.IDX, KPBM.IDX, HF.IDX, Hvalid, Wvalid, SH.IDX, SF.IDX, PB.IDX, DI.IDX, DB.IDX, CSL.IDX, CH.IDX or STRPBM.IDX}. When using the isolated index algorithm, all the plots computed by that algorithm will be shown. When using \code{FzzyCVIs or Hvalid} with more than 8 selected indices, the first 8 indices will be plotted.
 }
 \references{
 N. Wiroonsri, O. Preedasawakul, "A correlation-based fuzzy cluster validity index with secondary options detector," arXiv:2308.14785, 2023

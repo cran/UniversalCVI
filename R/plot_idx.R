@@ -4,7 +4,7 @@ plot_idx <- function(idxresult, selected.idx = NULL){
   if(!any(class(idxresult) %in% c("list","data.frame")))
     stop("Argument 'idxresult' must be list or data frame.")
   if(sum(!(names(idxresult) %in% c("c","WPC","WP","WPCI1","WPCI2","XB","KWON","KWON2","TANG","HF","WL","PBM","KPBM","CCVP","CCVS","GC1","GC2","GC3","GC4",
-                                   "NC","NCI","NCI1","NCI2","CSL","CH","DB","DBs","DI","PB","SF","STR"))) >0)
+                                   "NC","NCI","NCI1","NCI2","CSL","CH","DB","DBs","DI","PB","SF","SH","STR"))) >0)
     stop("Bad input data, 'idxresult' is not result from our package function.")
   if(is.data.frame(idxresult)){
     par(mar = c(4, 4, 0.5, 0.5))
@@ -14,7 +14,7 @@ plot_idx <- function(idxresult, selected.idx = NULL){
       plot(data.frame(idxresult),ylab = IDX.name, xlab = "c",type='b')
     }
     # Plot the indexes that the largest value indicates a valid optimal partition.
-    else if(any(IDX.name %in% c("WP","WPCI1","WPCI2","PBM","KPBM","CCVP","CCVS","CH","DI","PB","NCI","NCI1","NCI2","STR"))){
+    else if(any(IDX.name %in% c("WP","WPCI1","WPCI2","PBM","KPBM","CCVP","CCVS","CH","DI","PB","NCI","NCI1","NCI2","STR","SH"))){
       plot(data.frame(idxresult),ylab = IDX.name, xlab = "c",type='b')
       points(data.frame(idxresult)[which.max(data.frame(idxresult)[,2]),1],max(data.frame(idxresult)[,2]),col='red',pch=20)
     }else { # Plot the indexes that the smallest value indicates a valid optimal partition.
@@ -53,7 +53,7 @@ plot_idx <- function(idxresult, selected.idx = NULL){
         plot(data.frame(IDX),ylab = IDX.name, xlab = "c",type='b')
       }
       # Plot the indexes that the largest value indicates a valid optimal partition.
-      else if(any(IDX.name %in% c("WP","WPCI1","WPCI2","PBM","KPBM","CCVP","CCVS","CH","DI","PB","NCI","NCI1","NCI2","STR"))){
+      else if(any(IDX.name %in% c("WP","WPCI1","WPCI2","PBM","KPBM","CCVP","CCVS","CH","DI","PB","NCI","NCI1","NCI2","STR","SH"))){
         plot(data.frame(IDX),ylab = IDX.name, xlab = "c",type='b')
         points(data.frame(IDX)[which.max(data.frame(IDX)[,2]),1],max(data.frame(IDX)[,2]),col='red',pch=20)
       }else { # Plot the indexes that the smallest value indicates a valid optimal partition.
